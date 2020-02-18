@@ -1,0 +1,22 @@
+@import "../../custom.scss";
+div{
+    background-color: white;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    @include border-radius(5px);
+    @include radial-gradient(rgba(239, 243, 245, 0.774), rgb(217, 219, 219));
+   }
+
+.red{
+    border-color:rgba(252, 199, 185, 0.952),;
+    @include radial-gradient(rgba(252, 199, 185, 0.952), rgb(241, 61, 48));
+}
+.blue{
+    border-color:rgba(196, 237, 250, 0.932);
+    @include radial-gradient(rgba(196, 237, 250, 0.932), rgba(13, 149, 190, 0.932));
+}
+.green{
+    border-color:rgba(207, 243, 178, 0.897);
+    @include radial-gradient(rgba(207, 243, 178, 0.897), rgb(80, 165, 11));
+}

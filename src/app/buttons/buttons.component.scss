@@ -1,0 +1,70 @@
+@import "../custom.scss";
+div.main{
+	height: auto;
+	color:  $textColor;
+	div.options{	
+		div.control{
+			width: 100%;
+			height: auto;	
+			.select-css{
+				color:  $textColor;	
+				font-size: 17px;		
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				appearance: none;
+				padding: 0.5em;
+				width:100%;
+				background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") 90% 50% no-repeat; 
+				background-color: $backgroundColor;
+				background-size: 5%;
+				border: none;
+				@include border-radii(4px, 5px, 5px, 4px);
+			}
+			.select-css option {
+				font-weight:normal;
+				background-color: white;
+			}
+			input[type="text"]{
+				outline: none;
+				border:none;
+				background-image: none;
+				background-color:  #F3F3F3;
+			}
+			button{
+				border: none;
+				color:white!important;
+				background: rgb(123, 141, 147)!important;
+			}
+			button:disabled{
+				background: rgb(231, 229, 229);
+			}
+			
+
+		}
+	}
+	h5{
+		text-align: center;
+		margin: 1rem;
+	}
+	 div.fields{
+			width:80%;
+			margin:auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			border:0px solid grey;			
+	}
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 

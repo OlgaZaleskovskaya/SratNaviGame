@@ -1,0 +1,29 @@
+@import "../custom.scss";
+div.main{
+    color: $textColor;
+    height: 100vh;
+    overflow-y: scroll;
+    h2{
+        text-align: center;
+    }
+    div.user{
+        background-color: $backgroundColor;
+        margin: 5px; 
+        @include border-radius(5px);
+        position: relative;
+        font-size: 14px;
+        height: 45px;
+        p{ 
+            width: 35%;
+            position: relative;
+            text-overflow: ellipsis;
+            font-size: inherit;
+            font-weight:inherit;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        p:last-child{
+            width:65%;
+        }   
+    }
+}

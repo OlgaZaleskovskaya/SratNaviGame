@@ -1,0 +1,27 @@
+<div class="main ">
+    <div class="options row">
+        <div class="control col-4">
+             <select (change)="onOptionSelect($event)" class="select-css">
+                <option value="" selected data-default>Pick game mode</option>
+                <option *ngFor="let type of levels | async" [value]="type">{{type}}</option>
+            </select>
+        </div>
+        <div class="control col-4">
+            <input class = "select-css" name="name" type="text" placeholder="Enter your name" [(ngModel)]="currentUser">
+        </div>
+        <div class="control col-4">
+            <button class="select-css" (click)="onStartGame()" [disabled]="!currentLevel ? 'disabled': null"
+                type="button">{{gameSrv.messageBtn | uppercase}}</button>
+        </div>
+    </div>
+    <h5>{{gameSrv.message}} </h5>
+
+    <div class="fields" #fields>
+        <div class="field" *ngFor="let l of gameSrv.gameFieldArray">
+            <div class=" fld" *ngFor="let k of gameSrv.gameFieldArray">
+                <app-field [size]="getSize()" [status]="getStatus(l,k)" (click)="gameSrv.onUserClick(l,k)">
+                </app-field>
+            </div>
+        </div>
+    </div>
+</div>

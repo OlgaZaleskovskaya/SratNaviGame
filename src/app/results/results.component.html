@@ -1,0 +1,4 @@
+<div class="main">
+    <h2>Leader Board</h2>
+<div class="d-flex user" *ngFor = "let winner of resultsSrv.gamesList.reverse()"><p class ="p-2">{{winner.winner}} </p><p class ="p-2">{{winner.date}}</p></div>
+</div>
